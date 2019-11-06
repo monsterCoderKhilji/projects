@@ -1,0 +1,15 @@
+[{
+    "id": 1,
+    "course": "Node JS"
+}, {
+    "id": 2,
+    "course": "Angular"
+}, {
+    "id": 3
+}, {
+    "id": 4,
+    "course": "Java Memory Management"
+}, {
+    "id": 5,
+    "course": "React JS"
+}]
