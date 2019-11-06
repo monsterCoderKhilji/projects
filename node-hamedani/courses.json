@@ -5,7 +5,8 @@
     "id": 2,
     "course": "Angular"
 }, {
-    "id": 3
+    "id": 3,
+    "course": "DevOps"
 }, {
     "id": 4,
     "course": "Java Memory Management"
