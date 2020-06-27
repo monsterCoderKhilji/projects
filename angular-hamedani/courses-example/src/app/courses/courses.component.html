@@ -1,0 +1,41 @@
+<h2>{{getTitle()}}</h2>
+<div>
+    <ul>
+        <li *ngFor="let course of courses">{{course}}</li>
+    </ul>
+</div>
+<div id="table">
+    <table>
+        <tr>
+            <td [attr.colspan]="colSpan">Name</td>
+            <td [attr.colspan]="colSpan">Students</td>
+            <td [attr.colspan]="colSpan">Price</td>
+            <td [attr.colspan]="colSpan">Rating</td>
+            <td [attr.colspan]="colSpan">Release Date</td>
+        </tr>
+        <tr>
+            <td [attr.colspan]="valueSpan">{{course.name | uppercase}}</td>
+            <td [attr.colspan]="valueSpan">{{course.students | number}}</td>
+            <td [attr.colspan]="valueSpan">{{course.price | currency:'EUR'}}</td>
+            <td [attr.colspan]="valueSpan">{{course.rating | number:'1.2-2'}}</td>
+            <td [attr.colspan]="valueSpan">{{course.releaseDate}}</td>
+        </tr>
+
+    </table>
+</div>
+<div id="image">
+    <img src="{{imageUrl}}" />
+</div>
+<div>
+    <input type="text" [(ngModel)]='name' class="input-field" (keyup.enter)="onKeyUp()" placeholder="Enter course name">
+    <br>
+    <button class="btn btn-primary button-position" [class.active]="isActive"
+        [style.backgroundColor]="isActive?'blue':'white'" (click)="isActive = !isActive; onSave();">Save</button>
+</div>
+<div>
+    <p>{{text | summary:60}}</p>
+</div>
+<div>
+    <app-favorite></app-favorite>
+</div>
+

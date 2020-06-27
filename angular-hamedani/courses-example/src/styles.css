@@ -1,0 +1,14 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.css";
+
+body {
+  padding: 20px;
+}
+
+.button-position {
+    margin-top: 10px;
+}
+
+.input-field {
+    margin-top: 10px;
+}
