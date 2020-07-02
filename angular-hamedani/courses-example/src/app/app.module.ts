@@ -6,12 +6,14 @@ import { CoursesComponent } from './courses/courses.component';
 import { FormsModule } from '@angular/forms';
 import { SummaryPipe } from './summary.pipe';
 import { FavoriteComponent } from './favorite/favorite.component';
+import { SentenceImport } from './sentenceformat.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     CoursesComponent,
     SummaryPipe,
+    SentenceImport,
     FavoriteComponent
   ],
   imports: [

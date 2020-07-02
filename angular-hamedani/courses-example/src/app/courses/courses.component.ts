@@ -11,6 +11,7 @@ export class CoursesComponent implements OnInit {
   constructor(private coursesService: CoursesService) { }
 
   title = 'List of Courses';
+  assignText = '';
   courses: Array<string> = [];
   imageUrl = 'http://lorempixel.com/400/200';
   colSpan = 3;
