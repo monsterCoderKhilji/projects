@@ -36,14 +36,10 @@
     <p>{{text | summary:60}}</p>
 </div>
 <div id="titlecase">
-    <input 
-       type="text"
-       [(ngModel)]='assignText'
-    >
+    <input type="text" [(ngModel)]='assignText'>
     <br>
     <p>{{assignText | titlecase}}</p>
 </div>
 <div>
-    <app-favorite></app-favorite>
+    <app-favorite [isSelected]="post.isFavorite" (change)="onChangeNotify($event)"></app-favorite>
 </div>
-

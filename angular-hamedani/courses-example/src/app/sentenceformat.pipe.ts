@@ -6,6 +6,9 @@ import { Pipe, PipeTransform } from '@angular/core';
 export class SentenceImport implements PipeTransform {
 
     transform(sentence: string) {
+        if (!sentence) {
+            return null;
+        }
         const splitarr: Array<string> = sentence.split(' ');
         let count = 0;
         const result = splitarr.map((word) => {

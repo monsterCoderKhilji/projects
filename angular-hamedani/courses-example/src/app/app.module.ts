@@ -7,6 +7,8 @@ import { FormsModule } from '@angular/forms';
 import { SummaryPipe } from './summary.pipe';
 import { FavoriteComponent } from './favorite/favorite.component';
 import { SentenceImport } from './sentenceformat.pipe';
+import { PanelComponent } from './panel/panel.component';
+import { LikeComponent } from './like/like.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +16,9 @@ import { SentenceImport } from './sentenceformat.pipe';
     CoursesComponent,
     SummaryPipe,
     SentenceImport,
-    FavoriteComponent
+    FavoriteComponent,
+    PanelComponent,
+    LikeComponent
   ],
   imports: [
     BrowserModule,

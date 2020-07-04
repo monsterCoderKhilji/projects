@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CoursesService } from '../courses.service';
+import { FavoriteInterfaceObject } from '../favorite/favorite.component';
 
 @Component({
   selector: 'app-courses',
@@ -25,7 +26,11 @@ export class CoursesComponent implements OnInit {
     price: 190.95,
     releaseDate: new Date(2020, 6, 28)
   };
-  text = "";
+  text = " ";
+  post = {
+    title: 'Favorite',
+    isFavorite: true
+  };
 
   ngOnInit(): void {
     this.courses = this.getCourses();
@@ -39,6 +44,10 @@ export class CoursesComponent implements OnInit {
 
   onKeyUp(): void {
     console.log('Value is ' + this.name);
+  }
+
+  onChangeNotify(eventArgs: FavoriteInterfaceObject): void {
+    console.log('Favorite is clicked', eventArgs.newValue);
   }
 
   getTitle(): string {

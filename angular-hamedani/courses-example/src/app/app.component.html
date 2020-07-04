@@ -1,2 +1,11 @@
 <h1>Angular</h1>
-<app-courses></app-courses>
+<app-courses *ngIf="showCourses"></app-courses>
+<app-panel *ngIf="showPanel">
+    <div class="heading">
+        <h2> Heading</h2>
+    </div>
+    <div class="body">
+        <p>Text in body</p>
+    </div>
+</app-panel>
+<app-like *ngIf="showLike" [tweetIsLiked]="tweet.isLiked" [likeCount]="tweet.likesCount"></app-like>
