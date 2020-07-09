@@ -13,7 +13,8 @@ export class AppComponent {
   showZippy = false;
   showApp = false;
   viewMode = 'map';
-  showContactForm = true;
+  showContactForm = false;
+  showCourseForm = true;
   
   tweet = {
     content: 'Content of the tweet',

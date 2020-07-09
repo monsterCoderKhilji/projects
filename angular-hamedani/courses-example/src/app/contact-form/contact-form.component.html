@@ -19,7 +19,7 @@
         </label>
     </div>
     <div class="form-group">
-        <label for="contactMethod"></label>
+        <label for="contactMethod">Contact Method</label>
         <select ngModel name="contactMethod" id="contactMethod" class="form-control">
             <option value=""></option>
             <option *ngFor="let method of contactMethod" [ngValue]="method">{{method.name}}</option>
