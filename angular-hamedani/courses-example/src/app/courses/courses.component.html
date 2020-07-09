@@ -1,14 +1,21 @@
 <h2>{{getTitle()}}</h2>
-<div>
+<button class="btn btn-primary" (click)="loadCourses()">Load Courses</button>
+<div *ngIf="courses.length > 0; then courseslist else nocourses"></div>
+<ng-template #courseslist>
     <ul>
-        <li *ngFor="let course of courses">{{course}}</li>
+        <li *ngFor="let course of courses; index as i; trackBy : trackCourse">{{i}} {{course.name}}
+          <button (click)="onRemoveCourse(i)">Remove course</button>  
+        </li>
     </ul>
-</div>
+</ng-template>
+<ng-template #nocourses>
+    <p>No courses available</p>
+</ng-template>
 <div id="table">
     <table>
         <tr>
             <td [attr.colspan]="colSpan">Name</td>
-            <td [attr.colspan]="colSpan">Students</td>
+            <td [attr.colspan]="colSpan">Students</td> 
             <td [attr.colspan]="colSpan">Price</td>
             <td [attr.colspan]="colSpan">Rating</td>
             <td [attr.colspan]="colSpan">Release Date</td>

@@ -7,10 +7,14 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'courses-example';
-  showPanel = true;
+  showPanel = false;
   showCourses = false;
-  showLike = true;
-
+  showLike = false;
+  showZippy = false;
+  showApp = false;
+  viewMode = 'map';
+  showContactForm = true;
+  
   tweet = {
     content: 'Content of the tweet',
     isLiked: true,

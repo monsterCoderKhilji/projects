@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CoursesService } from '../courses.service';
 import { FavoriteInterfaceObject } from '../favorite/favorite.component';
+import { NgIf } from '@angular/common';
 
 @Component({
   selector: 'app-courses',
@@ -13,7 +14,7 @@ export class CoursesComponent implements OnInit {
 
   title = 'List of Courses';
   assignText = '';
-  courses: Array<string> = [];
+  courses: Array<any> = [];
   imageUrl = 'http://lorempixel.com/400/200';
   colSpan = 3;
   valueSpan = 3;
@@ -33,13 +34,24 @@ export class CoursesComponent implements OnInit {
   };
 
   ngOnInit(): void {
-    this.courses = this.getCourses();
     this.text = this.getText();
+  }
+
+  onRemoveCourse(index: number): void {
+    this.courses.splice(index, 1);
   }
 
   onSave(): void {
     this.coursesService.addCourse(this.name);
     this.name = '';
+  }
+
+  loadCourses() {
+    this.courses = this.coursesService.getCourses();
+  }
+
+  trackCourse(id, course) {
+    return course ? course.id : undefined;
   }
 
   onKeyUp(): void {

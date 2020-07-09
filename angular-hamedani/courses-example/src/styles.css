@@ -12,3 +12,7 @@ body {
 .input-field {
     margin-top: 10px;
 }
+
+.form-control.ng-touched.ng-invalid {
+  border : 2px solid red
+}
